@@ -15,6 +15,7 @@ namespace BookAPI.Controllers
         public IEnumerable<Book> Get()
         {
             string query = "select * from Book";
+            Console.Write(query);
             var list = _dataAccess.Query<Book>(query, CommandType.Text, null);
             return list;
         }
