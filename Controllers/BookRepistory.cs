@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookAPI.Controllers
 {
@@ -16,7 +15,6 @@ namespace BookAPI.Controllers
         public IEnumerable<Book> Get()
         {
             string query = "select * from Book";
-
             var list = _dataAccess.Query<Book>(query, CommandType.Text, null);
             return list;
         }
